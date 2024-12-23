@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+        background-image: linear-gradient(to right, #e73434, #585555);
+        padding-left: 250px;
+        padding-top: 35px;
+    }
+    legend {
+      font-family: jokerman;
+      color: rgb(255, 204, 0);
+    }
+    fieldset{
+        width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <form> 
+    <fieldset>
+      <legend>STUDENT INFO</legend>
+      <label for="tf1">Enter First Name</label>
+      <input type="text" name="tf1"><br><br>
+      <label for="tf2">Enter Last Name</label>
+      <input type="text" name="tf2"><br><br>
+      <label for="courses">Select Academic Year</label>
+      <input list="courses" name="cse_courses">
+      <datalist id="courses">
+        <option value="1st Year B.tech"></option>
+        <option value="2nd Year B.tech"></option>
+        <option value="3rd Year B.tech"></option>
+        <option value="4th Year B.tech"></option>
+        <option value="1st Year M.tech"></option>
+        <option value="2nd Year M.tech"></option>
+        <option value="Other"></option>
+      </datalist><br><br>
+      <label for="d1">Select Date Of Birth</label>
+      <input type="date" name="d1">
+    </fieldset>
+
+    <fieldset>
+      <legend>BRANCH INFO</legend>
+      <label for="tf1">Enter Course Name</label>
+      <input list="tf1" name="tf1">
+      <datalist id="tf1">
+        <option value=""></option>
+        <option value="CSE"></option>
+        <option value="CIVIL"></option>
+        <option value="ELECTRONICS"></option>
+        <option value="IOT"></option>
+        <option value="IT"></option>
+        <option value="Other"></option>
+      </datalist><br><br>
+      <label for="d1">Date & Time</label>
+      <input type="datetime-local" name="d1"> 
+    </fieldset><br>
+
+    <input type="submit"> 
+    <input type="reset"> 
+  </form>
+
+</body>
+</html>
