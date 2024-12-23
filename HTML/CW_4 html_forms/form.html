@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url('ba.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: cursive;
+            font-size: 40px;
+            color:cornsilk;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #pi {
+            width: 100px;
+            height: auto;
+        }
+
+        table {
+            margin: 45px;
+        }
+
+        #btnSubmit {
+            size: 100px;
+            background-color: orange;
+            transition: background-color 0.3s, border-radius 0.3s;
+        }
+        #btnReset {
+            size: 100px;
+            background-color: orange;
+            transition: background-color 0.3s, border-radius 0.3s;
+        }
+        #btnSubmit:hover {
+            background-color: bisque;
+            transform: scale(1.1); 
+            transition: transform 0.2s ease-in-out;
+        }
+        #btnReset:hover {
+            background-color: bisque;
+            transform: scale(1.1); 
+            transition: transform 0.2s ease-in-out;
+        }
+
+        header {
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #pi_run {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            animation: moveLeftRight 5s infinite;
+        }
+        input[type="reset"], 
+         input[type="submit"]{
+
+            width: 150px;
+            height: 40px; 
+            font-size: 16px; 
+        }
+        select,
+        textarea,input[type="text"] {
+            width: 150px;
+            height: 40px; 
+            font-size: 16px;
+            font-size: 16px; 
+            border: 1px solid white; 
+            border-radius: 5px;
+            padding: 0 10px;
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                left: 0;
+                transform: scaleX(1);
+            }
+            50% {
+                left: calc(100% - 100px);
+            }
+            100% {
+                left: 0;
+                transform: scaleX(-1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="pi_ru.gif" id="pi_run" alt="Moving Animation">
+    </header>
+    <center>
+        <form>
+            <img src="pichu.png" id="pi" alt="Pichu Image"><br>
+        <caption>Registration</caption>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th><input type="text" placeholder="Name"></th>
+            </tr>
+            <tr>
+                <th>Roll No:</th>
+                <th><input type="text" placeholder="Roll No"></th>
+            </tr>
+            <tr>
+                <th>Branch:</th>
+                <th>
+                    <select>
+                        <option value="cse">CSE</option>
+                        <option value="civil">Civil</option>
+                        <option value="eee">EEE</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <th><textarea placeholder="Address" cols="15"></textarea></th>
+            </tr>
+            <tr>
+                <th><input id="btnSubmit" type="submit" value="Submit"></th>
+                <th><input id="btnReset" type="reset" value="Reset"></th>
+              </tr>
+            </tr>
+        </table>
+        </form>
+    </center>
+</body>
+</html>
