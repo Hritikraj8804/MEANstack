@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style_table{
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: cursive;
+            box-shadow: 10px 10px 5px gray;
+            border-collapse: collapse;
+        }
+        .style_table thead tr{
+            background-color: black;
+            color: white;
+            text-align: left;
+        }
+        .style_table th, .style_table tr{
+            padding: 12px 15px;
+        }
+        .style_table tbody tr{
+            border-bottom: 1px solid cyan;
+            text-align: center;
+        }
+        .style_table tbody tr:nth-of-type(even)
+        {
+            background-color: aquamarine;
+        }
+        .style_table tbody tr:last-of-type{
+            border-bottom: 2px solid black;
+        }
+        tr:hover{
+            color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table class="style_table">
+        <thead>
+            <tr>
+                <th>S. no.</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>501</td>
+                <td>Mean Stack</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>502</td>
+                <td>Mean Stack</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>503</td>
+                <td>Mean Stack</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>504</td>
+                <td>Mean Stack</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>505</td>
+                <td>Mean Stack</td>
+                <td>65</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
