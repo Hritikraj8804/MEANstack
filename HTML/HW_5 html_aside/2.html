@@ -1,0 +1,531 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: transparent;
+            font-size: large;
+            background-image: url("https://i.pinimg.com/originals/19/97/f3/1997f3da28e8d29289097871f45b04fd.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: transparent;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 2px solid #000000e8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0412dd;
+            color: white;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .rating label {
+            cursor: pointer;
+        }
+
+        .rating input {
+            margin-right: 5px;
+        }
+
+        .button {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button1 {
+            background-color: transparent;
+            color: black;
+            border: 2px solid #000000;
+        }
+        .button1:hover{
+            background-color: #2904f9;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <h1>Feedback Form</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Teacher Profile</th>
+                <th>Subject Name</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img src="profile1.png" alt="Teacher 1">
+                        <span>Teacher Name</span>
+                    </div>
+                </td>
+                <td>Mean Stack</td>
+                <td>
+                    <div class="rating">
+                        <label><input type="radio" name="feedback1" value="Very Good"> Very Good</label>
+                        <label><input type="radio" name="feedback1" value="Good"> Good</label>
+                        <label><input type="radio" name="feedback1" value="Bad"> Bad</label>
+                        <label><input type="radio" name="feedback1" value="Very Bad"> Very Bad</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img src="profile1.png" alt="Teacher 2">
+                        <span>Teacher Name</span>
+                    </div>
+                </td>
+                <td>Machine Learning</td>
+                <td>
+                    <div class="rating">
+                        <label><input type="radio" name="feedback2" value="Very Good"> Very Good</label>
+                        <label><input type="radio" name="feedback2" value="Good"> Good</label>
+                        <label><input type="radio" name="feedback2" value="Bad"> Bad</label>
+                        <label><input type="radio" name="feedback2" value="Very Bad"> Very Bad</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img src="profile1.png" alt="Teacher 3">
+                        <span>Teacher Name</span>
+                    </div>
+                </td>
+                <td>Compiler Design</td>
+                <td>
+                    <div class="rating">
+                        <label><input type="radio" name="feedback3" value="Very Good"> Very Good</label>
+                        <label><input type="radio" name="feedback3" value="Good"> Good</label>
+                        <label><input type="radio" name="feedback3" value="Bad"> Bad</label>
+                        <label><input type="radio" name="feedback3" value="Very Bad"> Very Bad</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img src="profile1.png" alt="Teacher 3">
+                        <span>Teacher Name</span>
+                    </div>
+                </td>
+                <td>Mobile computing</td>
+                <td>
+                    <div class="rating">
+                        <label><input type="radio" name="feedback3" value="Very Good"> Very Good</label>
+                        <label><input type="radio" name="feedback3" value="Good"> Good</label>
+                        <label><input type="radio" name="feedback3" value="Bad"> Bad</label>
+                        <label><input type="radio" name="feedback3" value="Very Bad"> Very Bad</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="profile">
+                        <img src="profile1.png" alt="Teacher 3">
+                        <span>Teacher Name</span>
+                    </div>
+                </td>
+                <td>Cryptography and Network Security</td>
+                <td>
+                    <div class="rating">
+                        <label><input type="radio" name="feedback3" value="Very Good"> Very Good</label>
+                        <label><input type="radio" name="feedback3" value="Good"> Good</label>
+                        <label><input type="radio" name="feedback3" value="Bad"> Bad</label>
+                        <label><input type="radio" name="feedback3" value="Very Bad"> Very Bad</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button button1">Submit</button>
+    <button class="button button1">Reset</button>
+</body>
+
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mental Health Test</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            width: 45px;
+            height: 40px;
+            margin: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        aside {
+            display: flex; 
+        }
+
+        aside label {
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="mh.jpg" alt="logo" class="logo"></a>
+        <h1>Student Mental Health Test</h1>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>How often do you feel happy and content?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q1" value="Always"> Always</label>
+                            <label><input type="radio" name="q1" value="Often"> Often</label>
+                            <label><input type="radio" name="q1" value="Sometimes"> Sometimes</label>
+                            <label><input type="radio" name="q1" value="Rarely"> Rarely</label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you feel overwhelmed by schoolwork or exams?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q2" value="Always"> Always</label>
+                            <label><input type="radio" name="q2" value="Often"> Often</label>
+                            <label><input type="radio" name="q2" value="Sometimes"> Sometimes</label>
+                            <label><input type="radio" name="q2" value="Rarely"> Rarely</label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you ever feel sad, anxious, or angry for no reason?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q3" value="Always"> Always</label>
+                            <label><input type="radio" name="q3" value="Often"> Often</label>
+                            <label><input type="radio" name="q3" value="Sometimes"> Sometimes</label>
+                            <label><input type="radio" name="q3" value="Rarely"> Rarely</label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you have friends or family you can talk to about your problems?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q4" value="Always"> Always</label>
+                            <label><input type="radio" name="q4" value="Often"> Often</label>
+                            <label><input type="radio" name="q4" value="Sometimes"> Sometimes</label>
+                            <label><input type="radio" name="q4" value="Rarely"> Rarely</label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you make time for activities you enjoy?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q5" value="Always"> Always</label>
+                            <label><input type="radio" name="q5" value="Often"> Often</label>
+                            <label><input type="radio" name="q5" value="Sometimes"> Sometimes</label>
+                            <label><input type="radio" name="q5" value="Rarely"> Rarely</label>
+                        </aside>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mental Health Test</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            width: 45px;
+            height: 40px;
+            margin: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        aside {
+            display: flex;
+            justify-content: space-around; 
+        }
+
+        aside label {
+            display: block; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="mh.jpg" alt="logo" class="logo"></a>
+        <h1>Student Mental Health Test</h1>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>How often do you feel happy and content?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q1" value="A"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q1" value="B"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q1" value="C"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q1" value="D"></label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you feel overwhelmed by schoolwork or exams?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q2" value="A"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q2" value="B"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q2" value="C"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q2" value="D"></label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you ever feel sad, anxious, or angry for no reason?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q3" value="A"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q3" value="B"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q3" value="C"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q3" value="D"></label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you have friends or family you can talk to about your problems?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q4" value="A"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q4" value="B"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q4" value="C"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q4" value="D"></label>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you make time for activities you enjoy?</td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q5" value="A"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q5" value="B"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q5" value="C"></label>
+                        </aside>
+                    </td>
+                    <td>
+                        <aside>
+                            <label><input type="radio" name="q5" value="D"></label>
+                        </aside>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
