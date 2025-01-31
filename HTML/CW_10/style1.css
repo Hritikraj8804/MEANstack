@@ -1,0 +1,64 @@
+main {
+    background-color: #F2FED1;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0 0 black;
+    margin: 20px;
+}
+
+table {
+    margin: 45px;
+}
+
+#btnadd {
+    size: 100px;
+    background-color: orange;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+#btnremove {
+    size: 100px;
+    background-color: orange;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+#btnlogin {
+    size: 100px;
+    background-color: orange;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+#btnadd:hover {
+    background-color: bisque;
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
+#btnremove:hover {
+    background-color: bisque;
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
+#btnlogin:hover {
+    background-color: bisque;
+    transform: scale(1.1); 
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="button"], 
+ input[type="submit"]{
+
+    width: 150px;
+    height: 40px; 
+    font-size: 16px;
+}
+select,
+textarea,input[type="text"],
+ input[type="password"] {
+    width: 150px;
+    height: 40px; 
+    font-size: 16px;
+    font-size: 16px; 
+    border: 1px solid white; 
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}

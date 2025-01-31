@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let s1 = new Set();
+        // console.log(s1);
+
+        // let s2 = new Set("Prasad");
+        // console.log(s2);
+
+        // let cse = new Set();
+        // cse.add("prasad");
+        // cse.add("Durga");
+        // cse.add("YDP");
+        // cse.add("pavan");
+        // cse.add("Durga");
+        // console.log(cse);
+
+        // let cse1 = new Set(["Prasad", "Pavan", "rahul","puja","shek"]);
+        // let cse2 = new Set(["Abhi", "Pavan", "jitu", "kartik", "puja"]);
+        // console.log(cse1.has("MNST"));
+        // let a = cse1.delete("puja");
+        // console.log(a);
+        // console.log(cse1);
+
+        // cse2.clear();
+        // console.log(cse2);
+
+        let cse3 = new Set(["Prasad", "Pavan", "rahul","puja","shek"]);
+        let cse4 = new Set(["Abhi", "Pavan", "jitu", "kartik", "puja"]);
+        let comm = [];
+        for (let i of cse4){
+            if(cse3.has(i)){
+                comm.push(i);
+            }
+        }
+        console.log(comm);
+
+        
+
+    </script>
+</body>
+</html>

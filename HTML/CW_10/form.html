@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #218838;
+        }
+        #displayTable {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        let formData = [];
+
+        // Function to add data
+        function addData() {
+            const name = document.getElementById('nameInput').value.trim();
+            const course = document.getElementById('courseSelect').value;
+
+            if (!name) {
+                alert('Please enter a name.');
+                return;
+            }
+
+            // Add data to the array
+            formData.push({ name, course });
+
+            // Clear the name input field
+            document.getElementById('nameInput').value = '';
+
+            alert('Data added successfully!');
+        }
+
+        // Function to display data
+        function displayData() {
+            if (formData.length === 0) {
+                alert('No data to display.');
+                return;
+            }
+
+            // Create a map to store unique courses for each person
+            const dataMap = new Map();
+
+            // Populate the map
+            formData.forEach(entry => {
+                const { name, course } = entry;
+                if (!dataMap.has(name)) {
+                    dataMap.set(name, new Set()); // Use a Set to store unique courses
+                }
+                dataMap.get(name).add(course);
+            });
+
+            // Get the display table container
+            const displayTable = document.getElementById('displayTable');
+            displayTable.innerHTML = ''; // Clear previous content
+
+            // Create a table element
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Courses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            `;
+
+            // Populate the table with data
+            const tbody = table.querySelector('tbody');
+            dataMap.forEach((courses, name) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${name}</td>
+                    <td>${Array.from(courses).join(', ')}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // Append the table to the display container
+            displayTable.appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div>
+            <center>
+                <div>
+                    <h1>Course Form</h1>
+                </div>
+            </center>
+            <div>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Name:</th>
+                            <th><input type="text" placeholder="Name" id="nameInput"></th>
+                        </tr>
+                        <tr>
+                            <th>Course:</th>
+                            <th>
+                                <select id="courseSelect">
+                                    <option value="Java">Java</option>
+                                    <option value="Python">Python</option>
+                                    <option value="C++">C++</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><input id="btnSubmit" type="submit" value="Submit" onclick="addData()"></th>
+                            <th><input id="btnDisplay" type="button" value="Display" onclick="displayData()"></th>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <div id="displayTable">
+                <!-- Displayed data will appear here -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

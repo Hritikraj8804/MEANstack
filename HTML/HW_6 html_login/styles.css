@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+}
+
+.login-container {
+    background: #111;
+    padding: 20px 30px; /* Added padding for space inside the container */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    border: 5px solid transparent;
+    border-image-source: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta, red);
+    border-image-slice: 1;
+    animation: borderAnimate 3s linear infinite;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: block;
+    border: 2px solid #fff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 14px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff5733;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #c13b22;
+}
+
+@keyframes borderAnimate {
+    0% { border-image-source: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta, red); }
+    25% { border-image-source: linear-gradient(135deg, yellow, green, cyan, blue, magenta, red, yellow); }
+    50% { border-image-source: linear-gradient(225deg, green, cyan, blue, magenta, red, yellow, green); }
+    75% { border-image-source: linear-gradient(315deg, cyan, blue, magenta, red, yellow, green, cyan); }
+    100% { border-image-source: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta, red); }
+}

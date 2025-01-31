@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        
+        // function login()
+        // {
+        //     var u1 = localStorage.getItem('users') 
+        //     var p1 = localStorage.getItem('pw') 
+
+        //     var n = document.getElementById('nameInput').value
+        //     var p = document.getElementById('pwInput').value
+
+        //     if (n== u1 && p== p1){
+        //         alert('Successful Login')
+        //     }else{
+        //         alert('Error on Login')
+        //     }
+        // }
+
+        function login() {
+            // Retrieve existing users from localStorage
+            const users = JSON.parse(localStorage.getItem('users'));
+
+            // Get input values
+            const n = document.getElementById('nameInput').value.trim();
+            const p = document.getElementById('pwInput').value.trim();
+
+            // Check if the user exists and the password matches
+            const user = users.find(user => user.name === n && user.password === p);
+
+            if (user) {
+                alert('Successful Login');
+            } else {
+                alert('Error on Login');
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <main>
+        <div>
+            <center>
+                 <div>
+                    <h1>Course-Form</h1>
+                </div>
+            </center>
+            <div>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Name:</th>
+                            <th><input type="text" placeholder="Name" id="nameInput"></th>
+                        </tr>
+                        <tr>
+                            <th>Password:</th>
+                            <th><input type="text" placeholder="Password" id="pwInput"></th>
+                        </tr>
+                        <tr>
+                            <th><input id="btnlogin" type="button" value="Login" onclick="login()"></th>
+                          </tr>
+                        </tr>
+                    </table>
+                    </form>
+                </center>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
+
+
+
+
+
