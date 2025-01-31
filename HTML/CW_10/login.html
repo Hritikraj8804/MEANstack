@@ -6,43 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     
-    <script>
-        
-        // function login()
-        // {
-        //     var u1 = localStorage.getItem('users') 
-        //     var p1 = localStorage.getItem('pw') 
-
-        //     var n = document.getElementById('nameInput').value
-        //     var p = document.getElementById('pwInput').value
-
-        //     if (n== u1 && p== p1){
-        //         alert('Successful Login')
-        //     }else{
-        //         alert('Error on Login')
-        //     }
-        // }
-
-        function login() {
-            // Retrieve existing users from localStorage
-            const users = JSON.parse(localStorage.getItem('users'));
-
-            // Get input values
-            const n = document.getElementById('nameInput').value.trim();
-            const p = document.getElementById('pwInput').value.trim();
-
-            // Check if the user exists and the password matches
-            const user = users.find(user => user.name === n && user.password === p);
-
-            if (user) {
-                alert('Successful Login');
-            } else {
-                alert('Error on Login');
-            }
-        }
-
-
-    </script>
+    
 
 </head>
 <body>
@@ -73,6 +37,55 @@
                 </center>
             </div>
         </div>
+
+        <div id="message" style="width: 100%; text-align: center; background-color: #f8d7da; color: #721c24; padding: 10px; display: none;"></div>
+
+        <script>
+        
+            // function login()
+            // {
+            //     var u1 = localStorage.getItem('users') 
+            //     var p1 = localStorage.getItem('pw') 
+    
+            //     var n = document.getElementById('nameInput').value
+            //     var p = document.getElementById('pwInput').value
+    
+            //     if (n== u1 && p== p1){
+            //         alert('Successful Login')
+            //     }else{
+            //         alert('Error on Login')
+            //     }
+            // }
+            
+            function displayMessage(msg) {
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = msg;
+                messageDiv.style.display = 'block';
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 3000);
+            }
+
+            function login() {
+                // Retrieve existing users from localStorage
+                const users = JSON.parse(localStorage.getItem('users'));
+    
+                // Get input values
+                const n = document.getElementById('nameInput').value.trim();
+                const p = document.getElementById('pwInput').value.trim();
+    
+                // Check if the user exists and the password matches
+                const user = users.find(user => user.name === n && user.password === p);
+    
+                if (user) {
+                    displayMessage('Successful Login');
+                } else {
+                    displayMessage('Error on Login');
+                }
+            }
+    
+    
+        </script>
 
     </main>
     
